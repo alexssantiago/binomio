@@ -1,2 +1,3 @@
-# binomio
-TI - Binômio de Newton
+# 2° Trabalho Interdisciplinar
+Calculadora de Binômio de Newton.
+                                    by alexssantiago.
