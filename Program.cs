@@ -18,13 +18,20 @@ namespace BinomioDeNewton
             return fatorial;
         }
 
+        static int CoeficienteBinomial(int n, int p)
+        {
+            int coeficiente;
+            p = 0;
+            coeficiente = (Fatorial(n) / (Fatorial(p) * Fatorial(n - p)));
+            return coeficiente;
+        }
 
         static double CalculaBinomio(double a, double b, int n)
         {
             double calculo, parcela;
             int coeficiente, N, p = 0;
             N = n;
-            coeficiente = (Fatorial(n) / (Fatorial(p) * Fatorial(n - p)));
+            coeficiente = CoeficienteBinomial(n, p);
             parcela = (Math.Pow(a, n) * Math.Pow(b, p));
             calculo = (coeficiente * parcela);
             for (int i = 0; p <= n; i++)
@@ -37,7 +44,7 @@ namespace BinomioDeNewton
             }
             return calculo;
         }
-
+        
         static void Main(string[] args)
         {
             int n;
